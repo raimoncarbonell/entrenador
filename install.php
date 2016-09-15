@@ -46,7 +46,7 @@
 
 
             /* Crear la tabla temas */
-            $sql = "create table temas(id int auto_increment primary key, titulo varchar(30) not null, titulo_url varchar(30) not null unique');";
+            $sql = "create table temas(id int auto_increment primary key, titulo varchar(30) not null, titulo_url varchar(30) not null unique);";
             $res = $conexion->exec($sql);
             $err=$conexion->errorInfo()[2];
             if($res===FALSE) echo "<li>Creación de la tabla temas: <span class='err' title=\"$err\">ERROR</span></li>";
