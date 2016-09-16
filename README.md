@@ -1,6 +1,6 @@
 # Entrenador
+## Práctica del curso de desarrollo web
 
-| aaa | bbb | ccc |
-| --- | --- | --- |
-| aaa | bbb | ccc |
-| aaa | bbb | ccc |
+~~~
+Se trata de un generador de preguntas tipo test aleatorias.
+~~~
