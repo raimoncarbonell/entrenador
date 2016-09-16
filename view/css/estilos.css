@@ -44,7 +44,7 @@ main{
   margin: 1em auto;
 }
 
-#presentacion{
+.destacado{
   border: 1px solid gray;
   border-radius: 25px;
   background-color: rgb(240,240,255);

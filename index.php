@@ -1,6 +1,7 @@
 <?php
   require "vendor/autoload.php";
   require "control/controler.php";
+  require "model/preguntas.php";
 
   use Slim\Views\PhpRenderer;
 
@@ -8,6 +9,7 @@
 
   $con = $app->getContainer();
   $con['view'] = new PhpRenderer('view');
+  $con['model'] = new Pregunta();
   $con['urlbase'] = "/oscar/entrenador";
 
   //URLs publicas
