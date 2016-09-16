@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Entrenador de exámenes</title>
+    <link href="<?php echo $data['urlbase']; ?>/view/css/estilos.css" rel="stylesheet">
   </head>
   <body>
     <header>
