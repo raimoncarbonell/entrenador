@@ -3,6 +3,10 @@ body, h1, h2, h3, nav, ul, main, footer{
   padding: 0;
 }
 
+h2{
+  margin: 3em 0 2em 0;
+}
+
 body{
   font-size: 14px;
   font-family: monospace;
@@ -49,7 +53,8 @@ main{
   border-radius: 25px;
   background-color: rgb(240,240,255);
   padding: 2em;
-  margin: 3em 1em;
+  margin: 2em 1em;
+  display: block;
 }
 
 form label{

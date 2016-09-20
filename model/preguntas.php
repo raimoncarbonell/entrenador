@@ -32,6 +32,12 @@
       return ($res->fetch()['verdadera']==1);
     }
 
+    public function gestRespuestaCorrecta($preguntaID){
+      $sql = "select respuesta from respuestas where pregunta=$preguntaID;";
+      $res = $this->con->query($sql);
+      return $res->fetch()['respuesta'];
+    }
+
 
     private function getRespuestas($preguntaID){
       $sql = "select id, respuesta from respuestas where pregunta=$preguntaID;";
