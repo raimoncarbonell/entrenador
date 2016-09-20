@@ -15,21 +15,21 @@
 
 
     public function getPreguntaAleatoriaTema($tema_url){
-      $sql = "select p.id, p.pregunta from preguntas p, temas t where p.tema=t.id and t.titulo_url='$tema_url' order by RAND() limit 1;";
+      $sql = "select t.titulo as tema, p.id, p.pregunta from preguntas p, temas t where p.tema=t.id and t.titulo_url='$tema_url' order by RAND() limit 1;";
       return $this->getPregunta($sql);
     }
 
 
     public function getPreguntaAleatoria(){
-      $sql = "select id, pregunta from preguntas order by RAND() limit 1;";
+      $sql = "select t.titulo as tema, p.id, p.pregunta from preguntas p, temas t where p.tema=t.id order by RAND() limit 1;";
       return $this->getPregunta($sql);
     }
 
 
     public function isRespuestaTrue($id){
-      $sql = "select verdadera from respuestas where id=$id";
+      $sql = "select verdadera from respuestas where id=$id;";
       $res = $this->con->query($sql);
-      return ($res.fetch()['verdadera']==1);
+      return ($res->fetch()['verdadera']==1);
     }
 
 
@@ -46,6 +46,8 @@
       if($res){
         $aux = $res->fetch();
         $out['pregunta'] = $aux['pregunta'];
+        $out['tema'] = $aux['tema'];
+        $out['id'] = $aux['id'];
         $out['respuestas'] = $this->getRespuestas($aux['id']);
       }else{
         $out['pregunta'] = "";

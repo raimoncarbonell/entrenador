@@ -11,26 +11,30 @@
     </header>
     <nav>
       <ul>
-        <li><a <?php if($data['opcion']=="home") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>">Home</a></li>
-        <li><a <?php if($data['opcion']=="temas" || $data['opcion']=="pregtema") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/temas">Preguntas por temas</a></li>
-        <li><a <?php if($data['opcion']=="pregrand") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/pregunta/aleatoria">Preguntas aleatorias</a></li>
+        <li><a <?php if($data['opcion'][0]=="home") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>">Home</a></li>
+        <li><a <?php if($data['opcion'][0]=="temas" || $data['opcion'][0]=="pregtema") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/temas">Preguntas por temas</a></li>
+        <li><a <?php if($data['opcion'][0]=="pregrand") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/pregunta/aleatoria">Preguntas aleatorias</a></li>
       </ul>
     </nav>
     <main>
       <?php
-        switch ($data['opcion']) {
-          case 'home':
-            require_once "home.php";
-            break;
-          case 'temas':
-            require_once "temas.php";
-            break;
-          case 'pregtema':
-            require_once "pregunta.php";
-            break;
-          case 'pregrand':
-            require_once "pregunta.php";
-            break;
+        if(isset($data['opcion'][1]) && $data['opcion'][1]=="validar"){
+          require_once "validar.php";
+        }else{
+          switch ($data['opcion'][0]) {
+            case 'home':
+              require_once "home.php";
+              break;
+            case 'temas':
+              require_once "temas.php";
+              break;
+            case 'pregtema':
+              require_once "pregunta.php";
+              break;
+            case 'pregrand':
+              require_once "pregunta.php";
+              break;
+          }
         }
       ?>
     </main>

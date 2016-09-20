@@ -16,6 +16,7 @@
   $app->get("/", "\Controler:cargarHome");
   $app->get("/temas", "\Controler:cargarTemas");
   $app->get("/pregunta/{tema}", "\Controler:cargarPregunta");
+  $app->get("/validar/{idpregunta}", "\Controler:validarRespuesta");
 
 
   $app->run();
