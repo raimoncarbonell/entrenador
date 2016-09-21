@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrenador de exámenes</title>
     <link href="<?php echo $data['urlbase']; ?>/view/css/estilos.css" rel="stylesheet">
   </head>
@@ -18,7 +19,7 @@
     </nav>
     <main>
       <h2>Temas disponibles</h2>
-      <ul>
+      <ul id="temas">
         <?php
           foreach ($data['temas'] as $tema) {
             echo "<li><a href='${data['urlbase']}/index.php/pregunta/${tema['titulo_url']}'>${tema['titulo']}</a></li>";
