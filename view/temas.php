@@ -14,6 +14,7 @@
         <li><a href="<?php echo $data['urlbase']; ?>">Home</a></li>
         <li><a class="actual" href="<?php echo $data['urlbase']; ?>/index.php/temas">Preguntas por temas</a></li>
         <li><a href="<?php echo $data['urlbase']; ?>/index.php/pregunta/aleatoria">Preguntas aleatorias</a></li>
+        <li><a href="<?php echo $data['urlbase']; ?>/index.php/pregunta/nueva">Crear Pregunta</a></li>
       </ul>
     </nav>
     <main>

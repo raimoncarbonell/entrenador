@@ -59,6 +59,7 @@ main{
 
 form label{
   display: block;
+  margin-bottom: 5px;
 }
 
 form h3{
@@ -67,4 +68,40 @@ form h3{
 
 form input[type="submit"] {
   margin-top: 1em;
+}
+
+#mas{
+  float:right;
+}
+
+fieldset{
+  padding: 1em;
+}
+
+#newquestion span{
+  font-size: 0.9em;
+  color: rgb(100,100,255);
+}
+
+.msg{
+  border: 1px solid orange;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px orange;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.msg .button{
+  border: 1px solid orange;
+  color: orange;
+  float:right;
+  padding: 3px;
+  font-size: 0.7em;
+  border-radius: 5px;
+}
+
+.msg .button:hover{
+  box-shadow: 0 0 5px orange inset;
+  color: black;
+  cursor: pointer;
 }

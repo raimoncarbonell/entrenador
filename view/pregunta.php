@@ -14,6 +14,7 @@
         <li><a href="<?php echo $data['urlbase']; ?>">Home</a></li>
         <li><a <?php if($data['tema_url']!="aleatoria") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/temas">Preguntas por temas</a></li>
         <li><a <?php if($data['tema_url']=="aleatoria") echo 'class="actual"'; ?> href="<?php echo $data['urlbase']; ?>/index.php/pregunta/aleatoria">Preguntas aleatorias</a></li>
+        <li><a href="<?php echo $data['urlbase']; ?>/index.php/pregunta/nueva">Crear Pregunta</a></li>
       </ul>
     </nav>
     <main>
@@ -26,6 +27,7 @@
       <p><strong>tema: </strong><?php echo $data['tema']; ?></p>
       <?php if($data['pregunta']!=""){ ?>
         <form method="get" action="<?php echo "${data['urlbase']}/index.php/pregunta/${data['tema_url']}/validar/${data['id']}" ?>" class="destacado">
+          <h3><?php echo $data['pregunta']; ?></h3>
           <?php
             foreach ($data['respuestas'] as $r) {
               echo "<label><input type='radio' name='respuesta' value='${r["id"]}'>${r["respuesta"]}</label>";
@@ -41,7 +43,6 @@
       <?php } else { ?>
         <p>No hay preguntas.</p>
       <?php } ?>
-      <?php print_r($data); ?>
     </main>
     <footer>
       Mi versión de la práctica.
