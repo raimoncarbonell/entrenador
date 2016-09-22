@@ -13,9 +13,18 @@
   $con['model'] = new Pregunta();
   $con['urlbase'] = "/oscar/entrenador";
 
+  $auth = new \Slim\Middleware\HttpBasicAuthentication([
+    "users" => [
+      "admin" => "admin",
+      "rodolfo" => "contraseñaderodolfo"
+    ]
+  ]);
+
+  $app->add(new \Slim\Middleware\SafeURLMiddleware());
+
   //URLs para crear nuevas preguntas
-  $app->get("/pregunta/nueva", "\ControlerNewQuestions:cargarFormulario");
-  $app->post("/pregunta/nueva", "\ControlerNewQuestions:createNewQuestion");
+  $app->get("/pregunta/nueva", "\ControlerNewQuestions:cargarFormulario")->add($auth);
+  $app->post("/pregunta/nueva", "\ControlerNewQuestions:createNewQuestion")->add($auth);
 
   //URLs publicas
   $app->get("/", "\Controler:cargarHome");
