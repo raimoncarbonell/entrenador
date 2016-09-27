@@ -9,5 +9,5 @@ Se trata de un generador de preguntas tipo test aleatorias.
 
 |Entrada   | Salida Esperada |Descripcion|
 |-----------------|----------|------------------|
-| prueba          | prueba   | prueba           |
-|casa|aa|aa|
+|    2+3     |  false  |     sin nigun parentesis       |
+|(26+10+30|fasle|solo con parentesis de abertura |
