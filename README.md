@@ -4,6 +4,9 @@
 ~~~
 Se trata de un generador de preguntas tipo test aleatorias.
 ~~~
-|----------|-----------------|------------|
-| Enntrada | Salida Esperada | Descripcion 
-|----------|-----------------|------------|
+
+
+
+| Alineado a la izq. | Centrado | Alineado a la der. |
+|:-------------------|:--------:|-------------------:|
+| prueba             | prueba   | prueba             |
